@@ -1,0 +1,158 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Propose Day 🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,#ffd6e8,#ffeaf3);
+    text-align:center;
+}
+
+.page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+h1{
+    font-family:'Pacifico', cursive;
+    font-size:3rem;
+    color:#ff4d88;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff69b4;
+    color:white;
+    font-size:1.1rem;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(255,105,180,.4);
+}
+
+.btn:hover{ transform:scale(1.05); }
+
+.photos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    justify-content:center;
+    margin-top:25px;
+}
+
+.photos img{
+    width:260px;
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(255,105,180,.35);
+}
+
+.val-img{
+    width:300px;
+    border-radius:22px;
+    margin:25px 0;
+    box-shadow:0 10px 22px rgba(255,105,180,.4);
+}
+
+.options{
+    display:flex;
+    gap:25px;
+}
+
+.yes{ background:#ff4d88; }
+.no{ background:#ffc1d9; color:#ff4d88; }
+
+.love-text{
+    max-width:800px;
+    background:#fff0f6;
+    padding:25px;
+    border-radius:25px;
+    font-size:1.1rem;
+    color:#ff2f7d;
+    line-height:1.6;
+    margin-top:25px;
+    box-shadow:0 8px 18px rgba(255,105,180,.35);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page" id="page1">
+    <h1>Happyy Propose Dayy 🎀💞</h1>
+    <p style="color:#ff6fa5;">Something special just for you 💕</p>
+
+    <div class="photos">
+        <img src="IMG_6840.jpg">
+        <img src="IMG_6841.jpg">
+    </div>
+
+    <button class="btn" onclick="showPage(2)">Next 💌</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2" style="display:none;">
+    <h1>Will you be my Valentine?? 💘</h1>
+    <img src="IMG_6842.jpg" class="val-img">
+
+    <div class="options">
+        <button class="btn yes" onclick="showPage(3)">OFCC 😍</button>
+        <button class="btn no" onclick="showPage(4)">NOPE 🙈</button>
+    </div>
+</div>
+
+<!-- YES PAGE -->
+<div class="page" id="page3" style="display:none;">
+    <h1>YAYYYYY 😭💖🎀</h1>
+
+    <div class="photos">
+        <img src="IMG_6843.jpg">
+        <img src="IMG_6844.jpg">
+        <img src="IMG_6845.jpg">
+        <img src="IMG_6846.jpg">
+        <img src="IMG_6848.jpg">
+    </div>
+
+    <div class="love-text">
+        yayayayaya i loveeee youuu sfmmmm plsss never ever ever love me 😭💖  
+        i loveee youuuu sfmmm I can't live wout youuu  
+        thankyouu for making my life soo fking beautiful 🥺💞  
+        just plsss always be w me never ever ever leave me  
+        i loveeee youuuu sfmmmmm 💗💗🎀🎀💞💞💋💋💋💋
+    </div>
+</div>
+
+<!-- NO PAGE -->
+<div class="page" id="page4" style="display:none;">
+    <h1>plss I'll be sad 🥺💔</h1>
+    <img src="IMG_6832.jpg" class="val-img">
+    <button class="btn" onclick="showPage(2)">Try Again 🥺💞</button>
+</div>
+
+<script>
+function showPage(num){
+    for(let i=1;i<=4;i++){
+        document.getElementById("page"+i).style.display="none";
+    }
+    document.getElementById("page"+num).style.display="flex";
+}
+</script>
+
+</body>
+</html>
+
